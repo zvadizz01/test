@@ -1,2 +1,22 @@
-<script src="//customfingerprints.bablosoft.com/clientsafe.js"></script>
-<script>document.addEventListener("DOMContentLoaded", function(){ProcessFingerprint(false, "lmen08bfkwolceb9wwyw2tlwjdyscrqyrpobswkjqd2gvnem5vgtk0grfvd36s47")})</script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Fingerprint Test</title>
+        <script src="//customfingerprints.bablosoft.com/clientsafe.js"></script>
+    </head>
+    <body>
+        <input type="text" id="status" value="Process.." disabled>
+        <button onclick="localStorage.clear();">LocalStorageClear</button>
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            ProcessFingerprintInternal(false, "lmen08bfkwolceb9wwyw2tlwjdyscrqyrpobswkjqd2gvnem5vgtk0grfvd36s47", perfectcanvas);
+        if(null != localStorage.getItem("FingerPrintSwitcherLastTimePosted")){
+            localStorage.clear();
+            ProcessFingerprintInternal(false, "lmen08bfkwolceb9wwyw2tlwjdyscrqyrpobswkjqd2gvnem5vgtk0grfvd36s47", perfectcanvas);
+        }
+        })
+    </script>
+</html>
+
